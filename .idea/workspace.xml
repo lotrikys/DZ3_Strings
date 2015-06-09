@@ -25,8 +25,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/itstep/pastukhov/Strings/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4362745">
-              <caret line="114" column="64" selection-start-line="114" selection-start-column="64" selection-end-line="114" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.2647059">
+              <caret line="156" column="99" selection-start-line="156" selection-start-column="99" selection-end-line="156" selection-end-column="99" />
               <folding />
             </state>
           </provider>
@@ -254,7 +254,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1052" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1052" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -336,8 +336,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/itstep/pastukhov/Strings/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4362745">
-          <caret line="114" column="64" selection-start-line="114" selection-start-column="64" selection-end-line="114" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.2647059">
+          <caret line="156" column="99" selection-start-line="156" selection-start-column="99" selection-end-line="156" selection-end-column="99" />
           <folding />
         </state>
       </provider>

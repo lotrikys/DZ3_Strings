@@ -14,6 +14,8 @@ public class Main {
         task4_ReplaceSubstring();
         task5_InsertSubstring();
         task6_InsertWord();
+        task7_DeletingSymbols();
+        task8_DeletingWordsConsonant();
     }
 
     /* Заменяем каждый 3-й символ в слове знаком - */
@@ -127,6 +129,52 @@ public class Main {
         }
 
         System.out.println("Task 6");
+        System.out.println(ourFinalString);
+        System.out.println();
+    }
+
+    public static void task7_DeletingSymbols () {
+        String ourString = "Из небольшого текста удалить все символы, кроме пробелов, неявляющиеся буквами. "
+                            + "Между последовательностями подряд идущих букв оставить хотя бы один пробел.";
+        char ch[] = new char[ourString.length()];
+        String ourFinalString = new String();
+
+        ourString.getChars(0, ourString.length(), ch, 0);
+        for (int i = 0; i < ch.length; i++) {
+            if ((Character.isAlphabetic(ch[i])) || (Character.isSpaceChar(ch[i]))) {
+                ourFinalString += ch[i];
+            }
+        }
+
+        System.out.println("Task 7");
+        System.out.println(ourFinalString);
+        System.out.println();
+    }
+
+    public static void task8_DeletingWordsConsonant () {
+        char consonant[] = {'б', 'в', 'г', 'д', 'ж', 'з', 'й', 'к', 'л', 'м', 'н', 'п', 'р', 'с', 'т', 'ф', 'х', 'ц',
+                            'ч', 'ш', 'щ'};
+        String ourString = "Из текста удалить все слова заданной длины, начинающиеся на согласную аукву";
+        String[] splitString = ourString.split(" ");
+        String ourFinalString = new String();
+
+
+        for (int i = 0; i < splitString.length; i++) {
+            if (splitString[i].length() != 5) {
+                ourFinalString += splitString[i].concat(" ");
+                continue;
+            } else {
+                for (int j = 0; j < consonant.length; j++) {
+                    if (splitString[i].toLowerCase().startsWith(String.valueOf(consonant[j]))) {
+                        break;
+                    } if (j == consonant.length-1) {
+                        ourFinalString += splitString[i].concat(" ");
+                    }
+                }
+            }
+        }
+
+        System.out.println("Task 8");
         System.out.println(ourFinalString);
         System.out.println();
     }
