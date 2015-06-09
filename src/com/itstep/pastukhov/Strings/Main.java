@@ -203,9 +203,8 @@ public class Main {
         lastSymbol.getChars(0, lastSymbol.length(), lastChar, 0);
 
         for (int i = 0; i < ch.length; i++) {
-            if (ch[i] == firstChar[0] && firstIndex == -1 ) {
+            if ((ch[i] == firstChar[0]) && (firstIndex == -1)) {
                 firstIndex = i;
-                continue;
             } if (ch[i] == lastChar[0]) {
                 lastIndex = i;
             }
