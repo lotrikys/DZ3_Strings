@@ -1,5 +1,8 @@
 package com.itstep.pastukhov.Strings;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.text.DecimalFormat;
 
 /**
@@ -7,15 +10,16 @@ import java.text.DecimalFormat;
  */
 public class Main {
 
-    public static void main(String[] args) {
-        task1_ReplaceChar();
-        task2_NumberInAlphabet();
-        task3_ReplaceRaToRo();
-        task4_ReplaceSubstring();
-        task5_InsertSubstring();
-        task6_InsertWord();
-        task7_DeletingSymbols();
-        task8_DeletingWordsConsonant();
+    public static void main(String[] args) throws IOException {
+        //task1_ReplaceChar();
+        //task2_NumberInAlphabet();
+        //task3_ReplaceRaToRo();
+        //task4_ReplaceSubstring();
+        //task5_InsertSubstring();
+        //task6_InsertWord();
+        //task7_DeletingSymbols();
+        //task8_DeletingWordsConsonant();
+        task9_DeleteText();
     }
 
     /* Заменяем каждый 3-й символ в слове знаком - */
@@ -176,6 +180,42 @@ public class Main {
         }
 
         System.out.println("Task 8");
+        System.out.println(ourFinalString);
+        System.out.println();
+    }
+
+    public static void task9_DeleteText () throws IOException {
+        int firstIndex = -1;
+        int lastIndex = -1;
+        String ourString = "The \"exact, construction\" of the, indentation, (spaces vs. tabs) is unspecified.";
+        String ourFinalString = new String();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Task 9");
+        System.out.println("Enter a character from the text will be deleted");
+        String firstSymbol = reader.readLine();
+        System.out.println("To enter the symbol of the text is deleted");
+        String lastSymbol = reader.readLine();
+        char ch[] = new char[ourString.length()];
+        ourString.getChars(0, ourString.length(), ch, 0);
+        char firstChar[] = new char[firstSymbol.length()];
+        firstSymbol.getChars(0, firstSymbol.length(), firstChar, 0);
+        char lastChar[] = new char[lastSymbol.length()];
+        lastSymbol.getChars(0, lastSymbol.length(), lastChar, 0);
+
+        for (int i = 0; i < ch.length; i++) {
+            if (ch[i] == firstChar[0] && firstIndex == -1 ) {
+                firstIndex = i;
+                continue;
+            } if (ch[i] == lastChar[0]) {
+                lastIndex = i;
+            }
+        }
+        for (int i = 0; i < ch.length; i++) {
+            if ((i < firstIndex) || (i > lastIndex)) {
+                ourFinalString +=ch[i];
+            }
+        }
+
         System.out.println(ourFinalString);
         System.out.println();
     }
