@@ -151,6 +151,7 @@ public class Main {
         System.out.println();
     }
 
+    /* Удаляем слова длинной 5 символов и начинающиеся на согласную букву*/
     public static void task8_DeletingWordsConsonant () {
         char consonant[] = {'б', 'в', 'г', 'д', 'ж', 'з', 'й', 'к', 'л', 'м', 'н', 'п', 'р', 'с', 'т', 'ф', 'х', 'ц',
                             'ч', 'ш', 'щ'};
